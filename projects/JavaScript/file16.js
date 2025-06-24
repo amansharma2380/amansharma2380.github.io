@@ -6,24 +6,28 @@
 //     // }, 1000);
 // }
 
-function f1(){
-    return new Promise((resolve, reject)=>{
-         resolve(5);
-        //  reject("Something went wrong!");
-    });
-}
+// function f1(){
+//     return new Promise((resolve, reject)=>{
+//          resolve(5);
+//         //  reject("Something went wrong!");
+//     });
+// }
 
-function f2(x){
-    console.log(x+7);
+// function f2(x){
+//     console.log(x+7);
     
-}
+// }
 
 // const n = f1();
 // const result = f2(n);
 // console.log(result);
 
-f1()
-    .then((n)=>f2(n))
+// f1()
+//     .then((n)=>f2(n))
+//     .catch((err) => console.log(err));
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res)=>res.json())
+    .then((data)=> {})
     .catch((err) => console.log(err));
-
-
