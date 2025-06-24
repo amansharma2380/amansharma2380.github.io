@@ -5,6 +5,7 @@
 }
 
 .header {
+    background-color: rgb(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
 }
@@ -19,13 +20,19 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
 }
 
 
 
 .row div {
+    background-color: rgb(193, 47, 47,0.7);
     margin: 10px;
     padding: 10px;
-    border: 1px solid gray;
+    border: 3px solid rgb(193, 47, 47);
     border-radius: 10px;
+}
+.row div:hover{
+    background-color:rgb(193, 47, 47,0.4); 
+    transform: scale(1.05);
 }
