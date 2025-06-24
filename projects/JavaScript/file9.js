@@ -21,37 +21,68 @@
 // const newCart = ({...cart, 2:9});
 // console.log(newCart);
 
-let cart = {};
-const product = [
-    {id: 1, name: "product 1", price: 20},
-    {id: 2, name: "product 2", price: 50},
-    {id: 3, name: "product 3", price: 70},
-];
+// let cart = {};
+// const product = [
+//     {id: 1, name: "product 1", price: 20},
+//     {id: 2, name: "product 2", price: 50},
+//     {id: 3, name: "product 3", price: 70},
+// ];
 // const newProduct = [...product,{id: 4, name: "product 4", price: 56}];
-function addToCart(id){
-    cart = {...cart,[id]:1};
-}
-function increase(id){
-    const qty = cart[id] ? cart[id]+1 : 1;
-    cart = {...cart,[id]:qty};
-}
-function decrease(id){
-    const qty = cart[id] ? cart[id]-1 : 1;
-    cart = {...cart,[id]:qty};
-}
+// function addToCart(id){
+//     cart = {...cart,[id]:1};
+// }
+// function increase(id){
+//     const qty = cart[id] ? cart[id]+1 : 1;
+//     cart = {...cart,[id]:qty};
+// }
+// function decrease(id){
+//     const qty = cart[id] ? cart[id]-1 : 1;
+//     cart = {...cart,[id]:qty};
+// }
 
-addToCart(1);
-console.log(cart);
-addToCart(3);
-console.log(cart);
-addToCart(3);
-console.log(cart);
-increase(3)
-console.log(cart);
+// addToCart(1);
+// console.log(cart);
+// addToCart(3);
+// console.log(cart);
+// addToCart(3);
+// console.log(cart);
+// increase(3)
+// console.log(cart);
 
 
-decrease(3)
-console.log(cart);
-decrease(3)
-console.log(cart);
+// decrease(3)
+// console.log(cart);
+// decrease(3)
+// console.log(cart);
 
+const score = [ 2,1,7,5,3];
+// score.forEach((value, index,arr)=>{
+//     console.log(value);
+    
+// });
+// const newscore = score.map((value, index,arr)=>{
+//     return value;
+    
+// });
+// console.log(newscore);
+
+// const newscore = score.filter((value, index,arr)=>{
+//     return value>2;
+    
+// });
+
+// console.log(newscore);
+
+// const newscore = score.find((value, index,arr)=>{
+//     return value>2;
+    
+// });
+
+// console.log(typeof(newscore));
+
+const newscore = score.reduce((sum,value)=>{
+    return sum+ value;
+    
+},0);
+
+console.log(newscore);
