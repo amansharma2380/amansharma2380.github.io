@@ -1,6 +1,8 @@
 .container {
-    width: 900px;
+    width: 800px;
     margin: auto;
+    border: 5px solid #855151;
+    border-radius: 17px;
 
 }
 
@@ -8,6 +10,9 @@
    background: linear-gradient(145deg, #b7b5b5, #333030);
     display: flex;
     justify-content: space-between;
+    border: 0px solid #333030 ;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .header li {
