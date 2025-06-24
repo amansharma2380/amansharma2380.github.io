@@ -10,7 +10,7 @@ const showProducts = () => {
   products.map((value) => {
     str += `<div>
     <h3>${value.name}</h3>
-    <h4>$${value.price}</h4>
+    <h3>$${value.price}</h3>
     <button onclick='addToCart(${value.id})'>Add to Cart</button>
     </div>`;
   });
