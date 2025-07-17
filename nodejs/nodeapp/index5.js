@@ -22,7 +22,7 @@ app.get("/", (req,res)=>{
 });
 
 app.delete("/:id", (req,res)=>{
-const id = number(req.paraams.id);
+const pid = Number(req.params.id);
 product = product.filter((products)=> products.id !== pid);
 res.json("Product deleted");
 });

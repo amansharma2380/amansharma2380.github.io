@@ -15,7 +15,7 @@ app.listen(8080,()=>{
 //     res.send(req.msg + " products");
 // });
 
-const auth = (req,res)=>{
+const auth = (req,res,next)=>{
     const name = req.params.name;
     if(name === "john"){
         next();

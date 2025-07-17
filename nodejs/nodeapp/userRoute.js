@@ -1,14 +1,28 @@
-import express from"express";
+import express from "express";
 const  Router = express.Router();
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+const SECRET = "something";
+import { authenticate,authorize } from "./auth.js";
+import userModel from "./userModel.js";
+import {register,login,update, showuser , updateuser, deleteuser, showone} from "./userController.js";
 
 
-Router.get("/show", (req,res)=>{
-    res.send("user");
-});
-Router.post("/register", (req,res)=>{
-    res.send("register");
-});
-Router.post("/login", (req,res)=>{
-    res.send("logged in");
-});
+
+
+
+Router.post("/register", register);
+
+Router.post("/login", login);
+
+Router.post("/update/:email/:username", update);
+
+Router.get("/showuser",authenticate, authorize("admin"), showuser);
+
+Router.patch("/:id",  authenticate, authorize("admin"), updateuser)
+
+Router.delete("/:id", authenticate, authorize("admin"),  deleteuser);
+
+Router.get("/showone/:id", showone);
+
 export default Router;
